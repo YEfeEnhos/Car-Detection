@@ -2,6 +2,8 @@ import cv2
 
 cap = cv2.VideoCapture('video.avi')
 
+
+#http://ai.stanford.edu/~jkrause/cars/car_dataset.html  
 car_cascade = cv2.CascadeClassifier('cars.xml')
 
 
