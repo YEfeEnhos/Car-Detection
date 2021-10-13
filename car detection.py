@@ -39,16 +39,16 @@ while(cap.isOpened()):
 while True:
     ret, frame = cap.read()
 
-   gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
+    gray = cv.cvtColor(frame, cv.COLOR_BGR2GRAY)
 
     cars = car_cascade.detectMultiScale(gray, 1.1, 1)
     
     for (x, y, w, h) in cars:
         cv.rectangle(frame, (x, y), (x+w, y+h), (0, 0, 255), 2)
 
-cv.imshow('video2', frame)
+    cv.imshow('video2', frame)
 
-if cv.waitKey(33) == 27:
-    pass
+    if cv.waitKey(33) == 27:
+     pass
 
 cv2.destroyAllWindows()
